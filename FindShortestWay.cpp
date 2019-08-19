@@ -1,6 +1,5 @@
 #include<iostream>
 #include<stdio.h>
-#include<conio.h>
 #include<bits/stdc++.h> 
 
 #define MaxLength 50
@@ -46,28 +45,29 @@ void AlgorithmsFindShortWay()
 		OutPutGraph();
 	}
 }
-void FindShortWay()
-{
-	char c;
-	int x, y;
-	do
-	{
-		printf("Print the way: ");
-		scanf("%d", &x);
-		scanf("%d", &y);
-		for (int k = 1; k <= nodeNumber; k++)
-		{
-			int newValue = Matrix[x][k] + [k][y];
-			if (Matrix[x][y] == newValue)
-			{
-				printf("\nWay: %d", x);
+// void FindShortWay()
+// {
+// 	char c;
+
+// 	int x, y;
+// 	do
+// 	{
+// 		printf("Print the way: ");
+// 		scanf("%d", &x);
+// 		scanf("%d", &y);
+// 		for (int k = 1; k <= nodeNumber; k++)
+// 		{
+// 			int newValue = Matrix[x][k] + Matrix[k][y];
+// 			if (Matrix[x][y] == newValue)
+// 			{
+// 				printf("\nWay: %d", x);
 				
-			}
+// 			}
 			
-		}
-	}
+// 		}
+// 	}
 	
-}
+// }
 void InPutGraph()
 {
 	f = fopen("InPutGraph.txt", "r+");
