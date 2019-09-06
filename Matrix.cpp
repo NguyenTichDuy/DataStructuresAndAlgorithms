@@ -26,20 +26,23 @@ void Integrated_Matrix(int length, int _matrix[])
 		}
 	}
 }
-//void print(int h[][], int i, int j)
-//{
-//	int k;
-//	if (i == j)
-//	{
-//		printf("A%d", i);
-//	}
-//	else
-//	{
-//		k = h[i][j];
-//		printf("(");
-//		print(h, i, j);
-//	}
-//}
+void print(int i, int j)
+{
+	int k;
+	if (i == j)
+	{
+		printf("A%d", i);
+	}
+	else
+	{
+		k = h[i][j];
+		printf("(");
+		print(i, k);
+		printf("*");
+		print(k+ 1, j);
+		printf(")");
+	}
+}
 int main()
 {
 	int matrix[] = {20, 2, 30, 12, 8};
@@ -64,6 +67,6 @@ int main()
 		}
 		printf("\n");
 	}
-	
+	print(1, length);
 }
 
