@@ -1,0 +1,3 @@
+[submodule "DataStructuresAndAlgorithms"]
+	path = DataStructuresAndAlgorithms
+	url = https://github.com/NguyenTichDuy/DataStructuresAndAlgorithms.git

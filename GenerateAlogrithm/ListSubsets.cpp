@@ -4,7 +4,6 @@ FILE *f;
 
 void printResult(int arraySub[])
 {
-    //f = fopen("OutPutOfListSubset.txt", "a");
     printf("\n");
     for (int i = 0; i < k; i++)
     {
@@ -14,7 +13,6 @@ void printResult(int arraySub[])
 void List(int arraySub[])
 {
     printResult(arraySub);
-    int i = k - 1;
     for (int i = k - 1; i >= 0; i--)
     {
         if (arraySub[i] < n - k + i + 1)
