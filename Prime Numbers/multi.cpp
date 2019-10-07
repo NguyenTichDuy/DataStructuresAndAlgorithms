@@ -8,7 +8,7 @@ int modExpr(int x, int y, int m)
     }
     else if (y % 2 == 0)
     {
-        return modExpr(x *x, y/= 2, m) % m;
+        return modExpr(x *x, y / 2, m) % m;
     }
     else
     {
@@ -18,7 +18,7 @@ int modExpr(int x, int y, int m)
 }
 int modeExprLoop(int x, int y, int m)
 {
-    if (y == 0)
+    if (y == 0 && m > 1)
     {
         return 1;
     }
@@ -37,6 +37,5 @@ int modeExprLoop(int x, int y, int m)
 }
 int main()
 {
-    if (2%2)
-        printf("%d %d", modExpr(2, 3, 3), modeExprLoop(2, 3, 3));
+    printf("%d %d", modExpr(7, 7, 5), modeExprLoop(7, 7, 5));
 }
