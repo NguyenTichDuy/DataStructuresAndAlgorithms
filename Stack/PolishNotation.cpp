@@ -69,7 +69,7 @@ int main()
 	//do 
 	//{
 		printf("\nPrint expression: ");
-		gets(expression);
+		fgets(expression);
 		for(int i = 0 ;expression[i] != NULL; i++)
 		{
 			if (expression[i] == '(')

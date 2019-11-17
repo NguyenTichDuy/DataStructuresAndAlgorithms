@@ -1,6 +1,5 @@
 #ifndef __AUTO_REALEASE_POOL__
 #define __AUTO_REALEASE_POOL__
-
 #include <vector>
 class Ref;
 class AutoRealeasePool
@@ -25,8 +24,10 @@ class PoolManager
         void pop();
      
         AutoRealeasePool *getCurrentPool() const;
-    private:
+        
         static PoolManager *instance;
+
+    private:
         std::vector<AutoRealeasePool*> poolArray;
         ~PoolManager();
 };

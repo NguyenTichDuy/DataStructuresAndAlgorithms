@@ -7,7 +7,7 @@ typedef int Element_type;
 class Stack : public Ref
 {
     private:
-    Element_type index;
+    int index;
     Element_type *arr;
 
     public:

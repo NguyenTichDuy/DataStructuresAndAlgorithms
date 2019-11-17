@@ -1,0 +1,3 @@
+#!/bin/bash
+g++-7 AutoReleasePool.cpp Ref.cpp Stack.cpp StackPointer.cpp Test.cpp -o Stack
+./Stack

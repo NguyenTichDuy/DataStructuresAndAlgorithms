@@ -1,8 +1,10 @@
 #include"Stack.h"
-
+#include <iostream>
+using namespace std;
 Stack::Stack()
 {
-    arr = Element_type[MAX_LENGTH];
+    arr = new Element_type[MAX_LENGTH];
+    index = -1;
 }
 Stack::~Stack()
 {

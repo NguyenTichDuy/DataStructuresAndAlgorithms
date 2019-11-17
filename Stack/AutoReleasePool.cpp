@@ -21,18 +21,19 @@ void AutoRealeasePool::Clear()
 }
 
 // defintion of class pool manager
+PoolManager* PoolManager::instance = nullptr;
 
-static PoolManager::getInstance()
+PoolManager* PoolManager::getInstance()
 {
-    if (this->instance == nullptr)
+    if (instance == nullptr)
     {
-        this->instance = new PoolManager();
+        instance = new PoolManager();
 
         new AutoRealeasePool();
     }
     return instance;
 }
-PoolManager::~PoolManager()
+PoolManager::~PoolManager() 
 {
     while (!poolArray.empty())
     {
@@ -45,7 +46,7 @@ void PoolManager::push(AutoRealeasePool *pool)
 {
     poolArray.push_back(pool);
 }
-AutoRealeasePool *PoolManager::getCurrentPool()
+AutoRealeasePool *PoolManager::getCurrentPool() const
 {
     return  poolArray.back();
 }
