@@ -21,11 +21,11 @@ void OutPut(Stack *_stack)
     }
     fclose(f2);
 }
+
 int main()
 {
     Stack *arrStack = Stack::createStack();
     Input(arrStack);
-    
     arrStack->push(5);
     OutPut(arrStack);
 }

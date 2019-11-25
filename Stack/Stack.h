@@ -2,7 +2,7 @@
 #define __STACK__
 #include "Ref.h"
 
-#define MAX_LENGTH 1000
+#define MAX_LENGTH 10
 typedef int Element_type;
 class Stack : public Ref
 {

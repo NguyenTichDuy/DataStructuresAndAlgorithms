@@ -55,7 +55,7 @@ Element_type Stack::at(int _index)
 
 Stack* Stack::createStack()
 {
-    Stack *stack = new Stack();
+    Stack *stack = new (std::nothrow) Stack();
     if (stack)
     {
         stack->autoRealease();

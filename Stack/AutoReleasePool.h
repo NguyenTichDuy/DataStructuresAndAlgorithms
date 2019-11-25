@@ -11,24 +11,39 @@ class AutoRealeasePool
         AutoRealeasePool();
         void AddObject(Ref * object);
 };
-
-//  
-
+class DestroyedMyInstance;
 class PoolManager
 {
     public:
-        static PoolManager *getInstance();
+        static PoolManager* getInstance();
     
         void push(AutoRealeasePool* pool);
 
         void pop();
      
         AutoRealeasePool *getCurrentPool() const;
-        
-        static PoolManager *instance;
 
+        static void releaseInstance();
+    protected:
+        friend class DestroyedMyInstance;
+        virtual ~PoolManager();
     private:
-        std::vector<AutoRealeasePool*> poolArray;
-        ~PoolManager();
+    
+        static PoolManager* instance;
+
+        static DestroyedMyInstance detroyInstance;
+        
+        std::vector<AutoRealeasePool*> poolArray;     
 };
+//  
+class DestroyedMyInstance
+{
+private:
+    PoolManager *singleton;
+public:
+    DestroyedMyInstance(PoolManager *_instance);
+    void setInstance(PoolManager *_instance);
+    ~DestroyedMyInstance();
+};
+
 #endif //__AUTO_REALEASE_POOL__

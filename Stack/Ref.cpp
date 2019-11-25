@@ -5,3 +5,7 @@ void Ref::autoRealease()
 {
     PoolManager::getInstance()->getCurrentPool()->AddObject(this);
 }
+Ref::~Ref()
+{
+    
+}

@@ -4,6 +4,7 @@ class Ref
 {
 public:
     void autoRealease();
+    virtual ~Ref();
 
 };
 #endif

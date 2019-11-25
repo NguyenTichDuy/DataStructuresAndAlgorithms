@@ -1,3 +1,5 @@
 #!/bin/bash
-g++-7 AutoReleasePool.cpp Ref.cpp Stack.cpp StackPointer.cpp Test.cpp -o Stack
+g++-7 AutoReleasePool.h AutoReleasePool.cpp Ref.cpp Stack.cpp StackPointer.cpp Test.cpp -o Stack
 ./Stack
+if ( $PS2 == 'c' || $PS2 == 'C' )
+valgrind --leak-check=full --show-leak-kinds=all ./Stack
