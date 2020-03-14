@@ -11,7 +11,6 @@ class AutoRealeasePool
         AutoRealeasePool();
         void AddObject(Ref * object);
 };
-class DestroyedMyInstance;
 class PoolManager
 {
     public:

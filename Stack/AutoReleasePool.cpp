@@ -38,8 +38,7 @@ void DestroyedMyInstance::setInstance(PoolManager *_instance)
     this->singleton = _instance;
 }
 // defintion of class pool manager
-PoolManager* PoolManager::instance = NULL;
-DestroyedMyInstance PoolManager::destroyInstance;
+PoolManager* PoolManager::instance = nullptr;
 
 PoolManager* PoolManager::getInstance()
 {

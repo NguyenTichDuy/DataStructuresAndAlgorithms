@@ -3,7 +3,7 @@
         {
             "type": "shell",
             "label": "cpp build active file",
-            "command": "/usr/bin/cpp",
+            "command": "/usr/bin/g++",
             "args": [
                 "-g",
                 "${file}",
@@ -12,6 +12,10 @@
             ],
             "options": {
                 "cwd": "/usr/bin"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
             }
         }
     ],
